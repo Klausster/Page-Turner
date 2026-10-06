@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://j6xyb14qkr2t"]
+
+[ext_resource type="PackedScene" uid="uid://0oawmp381b3y" path="res://player.tscn" id="1_ig7tw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_onrkg"]
+font_size = 30
+
+[node name="main" type="Node2D" unique_id=300319353]
+
+[node name="player" parent="." unique_id=1868615559 instance=ExtResource("1_ig7tw")]
+position = Vector2(606, 271)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1941639316]
+position = Vector2(604, 502)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=447081273]
+position = Vector2(0, 3)
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="Label" type="Label" parent="StaticBody2D/CollisionShape2D" unique_id=1873947698]
+offset_left = -752.0
+offset_top = 3.0
+offset_right = 806.0
+offset_bottom = 45.0
+text = "Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor "
+label_settings = SubResource("LabelSettings_onrkg")
