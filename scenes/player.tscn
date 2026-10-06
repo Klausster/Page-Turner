@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://cxp80f72854a7" path="res://scripts/PLAYER.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://c6b143ygphjd6" path="res://assets/texture/PlayerPeriod.png" id="2_qhqgy"]
-[ext_resource type="Script" uid="uid://oc802r51uy18" path="res://scenes/camera.gd" id="3_dqkch"]
+[ext_resource type="Script" uid="uid://oc802r51uy18" path="res://Extra Scenes/camera.gd" id="3_dqkch"]
 [ext_resource type="AudioStream" uid="uid://cykssew7ld6jm" path="res://assets/sounds/Jump.mp3" id="3_i3pqv"]
-[ext_resource type="AudioStream" uid="uid://d4jnjwnlbajxs" path="res://assets/sounds/yodguard-quick-short-gust-of-wind-3-535450.mp3" id="4_tuyoq"]
-[ext_resource type="AudioStream" uid="uid://bjttxyohu0v4q" path="res://assets/sounds/yodguard-quick-short-gust-of-wind-6-535447.mp3" id="5_fjrip"]
+[ext_resource type="AudioStream" uid="uid://c5qh2dvsfr3qx" path="res://assets/sounds/yodguard-quick-short-gust-of-wind-3-535450 (mp3cut.net).mp3" id="4_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://bki4ku25g6614" path="res://assets/sounds/yodguard-quick-short-gust-of-wind-6-535447 (mp3cut.net).mp3" id="5_fjrip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(12, 12)

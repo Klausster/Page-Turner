@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvvo15hds6a7e"]
 
 [ext_resource type="Texture2D" uid="uid://cbuwdllfrb18n" path="res://assets/texture/Retouch_2024112913572713.svg" id="1_ljd5v"]
-[ext_resource type="Script" uid="uid://ci7gpp0dtp46g" path="res://scenes/area_2d.gdkill_zone.gd" id="2_7a7y0"]
+[ext_resource type="Script" uid="uid://ci7gpp0dtp46g" path="res://Extra Scenes/area_2d.gdkill_zone.gd" id="2_7a7y0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 

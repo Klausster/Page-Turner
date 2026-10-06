@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5qh2dvsfr3qx"
+path="res://.godot/imported/yodguard-quick-short-gust-of-wind-3-535450 (mp3cut.net).mp3-5de76960d242b2d969d1085e69d201c0.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/yodguard-quick-short-gust-of-wind-3-535450 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/yodguard-quick-short-gust-of-wind-3-535450 (mp3cut.net).mp3-5de76960d242b2d969d1085e69d201c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

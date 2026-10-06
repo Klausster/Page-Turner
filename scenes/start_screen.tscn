@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bmcj6g2n8mabc"]
+
+[ext_resource type="Script" uid="uid://dbj0tshf0gepe" path="res://Extra Scenes/start_screen.gd" id="1_o7i0r"]
+[ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_he1sj"]
+[ext_resource type="AudioStream" uid="uid://bovnao73wxws0" path="res://assets/sounds/TitleMusic.mp3" id="3_he1sj"]
+
+[node name="StartScreen" type="Control" unique_id=1648653894]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o7i0r")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=452937083]
+layout_mode = 0
+offset_right = 1180.0
+offset_bottom = 660.0
+
+[node name="Title" type="Label" parent="." unique_id=531346992]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 173.0
+offset_right = 865.0
+offset_bottom = 276.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_he1sj")
+theme_override_font_sizes/font_size = 92
+text = "Page Turner."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=308796495]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = 101.0
+offset_right = 92.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1744777148]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_he1sj")
+text = "Play"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1613426425]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_he1sj")
+text = "Quit"
+
+[node name="TitleMusic" type="AudioStreamPlayer" parent="." unique_id=1113667277]
+unique_name_in_owner = true
+stream = ExtResource("3_he1sj")
+autoplay = true
