@@ -131,6 +131,6 @@ shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2133681119]
 z_index = -5
-position = Vector2(636, 273)
+position = Vector2(620, 389)
 scale = Vector2(15.0859375, 2096.75)
 texture = SubResource("CurveTexture_57qmd")
