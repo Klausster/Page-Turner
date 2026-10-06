@@ -31,3 +31,5 @@ func _physics_process(delta: float) -> void:
 func die() -> void:
 	global_position = spawn_position
 	velocity = Vector2.ZERO
+	
+	

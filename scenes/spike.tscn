@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dvvo15hds6a7e"]
+
+[ext_resource type="Texture2D" uid="uid://cbuwdllfrb18n" path="res://assets/texture/Retouch_2024112913572713.svg" id="1_ljd5v"]
+[ext_resource type="Script" uid="uid://ci7gpp0dtp46g" path="res://scenes/area_2d.gdkill_zone.gd" id="2_7a7y0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 0.032000087
+height = 0.064000174
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(0.08600001, 0.07137508)
+
+[node name="SPIKE" type="Node2D" unique_id=1949793350]
+scale = Vector2(5, 5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1862223496]
+scale = Vector2(99.99999, 99.99999)
+physics_material_override = SubResource("PhysicsMaterial_g4v7s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1046567762]
+position = Vector2(-0.0012498989, -8.568168e-08)
+shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=523685706]
+position = Vector2(-0.0022499457, -0.011500029)
+scale = Vector2(0.00015966808, 7.128902e-05)
+texture = ExtResource("1_ljd5v")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=172457526]
+position = Vector2(5.9604645e-08, 0)
+script = ExtResource("2_7a7y0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=1789252443]
+position = Vector2(-0.0010000601, -0.010312465)
+shape = SubResource("RectangleShape2D_57qmd")

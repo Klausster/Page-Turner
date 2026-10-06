@@ -1,35 +1,32 @@
 [gd_scene format=3 uid="uid://03mrfph6brvy"]
 
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="1_tbgi4"]
-[ext_resource type="Texture2D" uid="uid://cbuwdllfrb18n" path="res://assets/texture/Retouch_2024112913572713.svg" id="2_tefeu"]
+[ext_resource type="PackedScene" uid="uid://dvvo15hds6a7e" path="res://scenes/spike.tscn" id="4_jyhfs"]
 [ext_resource type="AudioStream" uid="uid://c80jcjngceu2b" path="res://assets/sounds/Song 1.mp3" id="4_tipki"]
 [ext_resource type="Texture2D" uid="uid://eb2r158wd2wo" path="res://assets/texture/flag-svgrepo-com.svg" id="5_85g3d"]
 [ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="5_tbgi4"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_g4v7s"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
-size = Vector2(0.99324965, 0.996)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
-radius = 0.031999946
-height = 0.085999966
+[ext_resource type="PackedScene" uid="uid://bylp2tvf6hcn4" path="res://scenes/Floor.tscn" id="6_tefeu"]
 
 [sub_resource type="GDScript" id="GDScript_jyhfs"]
-script/source = "
+script/source = "# finish.gd
 extends Area2D
 
-func _ready() -> void:
-		pass
-	
-func _on_body_entered(body: Node2D) -> void:
-	get_tree().quit()
-"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
-size = Vector2(0.05300006, 0.07475014)
+@export_file(\"*.tscn\") var next_level: String
+
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+
+
+func _on_body_entered(body: Node2D) -> void:
+	print(\"FINISH touched\")
+	if body.has_method(\"die\"):
+		if next_level != \"res://scenes/win_screen.tscn\":
+			get_tree().change_scene_to_file.call_deferred(\"res://scenes/win_screen.tscn\")
+		else:
+			print(\"You win!\")
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
 size = Vector2(46.5, 207)
@@ -54,63 +51,20 @@ curve = SubResource("Curve_d0u6y")
 [node name="PLAYER" parent="." unique_id=1868615559 instance=ExtResource("1_tbgi4")]
 position = Vector2(562, 322)
 
-[node name="LevelNode2" type="Node2D" parent="." unique_id=1862751621]
-position = Vector2(576, 938)
-scale = Vector2(10, 10)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="LevelNode2" unique_id=1584458042]
-scale = Vector2(99.99999, 99.99999)
-physics_material_override = SubResource("PhysicsMaterial_g4v7s")
-
-[node name="Sprite2D" type="Sprite2D" parent="LevelNode2/StaticBody2D" unique_id=819724036]
-position = Vector2(1.1050001, -0.051999986)
-scale = Vector2(0.99799997, 0.9980001)
-texture = SubResource("CanvasTexture_g4v7s")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelNode2/StaticBody2D" unique_id=1634308409]
-position = Vector2(1.105, -0.05399996)
-shape = SubResource("RectangleShape2D_yf5fn")
-
-[node name="Spike" type="Node2D" parent="." unique_id=1858559334]
-position = Vector2(576, 938)
-scale = Vector2(10, 10)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Spike" unique_id=2131962306]
-scale = Vector2(99.99999, 99.99999)
-physics_material_override = SubResource("PhysicsMaterial_g4v7s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/StaticBody2D" unique_id=526388559]
-position = Vector2(1.01, -0.552)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_g4v7s")
-
-[node name="Sprite2D" type="Sprite2D" parent="Spike/StaticBody2D" unique_id=695918449]
-position = Vector2(1.01, -0.56850004)
-scale = Vector2(0.00015966808, 7.128902e-05)
-texture = ExtResource("2_tefeu")
-
-[node name="Area2D" type="Area2D" parent="Spike/StaticBody2D" unique_id=2036271629]
-position = Vector2(5.9604645e-08, 0)
-script = SubResource("GDScript_jyhfs")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/StaticBody2D/Area2D" unique_id=2143321253]
-position = Vector2(1.0115, -0.55799997)
-shape = SubResource("RectangleShape2D_57qmd")
-
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=960336326]
 stream = ExtResource("4_tipki")
 autoplay = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=322325551]
+[node name="Finish" type="Area2D" parent="." unique_id=322325551]
 position = Vector2(2157, 287)
 script = SubResource("GDScript_jyhfs")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=666688583]
+[node name="Sprite2D" type="Sprite2D" parent="Finish" unique_id=666688583]
 position = Vector2(-4.2499027, 0.7500076)
 scale = Vector2(0.058125243, 0.256875)
 texture = ExtResource("5_85g3d")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=79393525]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish" unique_id=79393525]
 position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_d0u6y")
 
@@ -131,6 +85,16 @@ shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2133681119]
 z_index = -5
-position = Vector2(636, 273)
+position = Vector2(1382, 124.000015)
 scale = Vector2(15.0859375, 2096.75)
 texture = SubResource("CurveTexture_57qmd")
+metadata/_edit_lock_ = true
+
+[node name="Label2" parent="." unique_id=918934751 instance=ExtResource("6_tefeu")]
+offset_left = 1192.0
+offset_top = 385.0
+offset_right = 2752.0
+offset_bottom = 430.0
+
+[node name="SPIKE" parent="." unique_id=1949793350 instance=ExtResource("4_jyhfs")]
+position = Vector2(1566, 383)

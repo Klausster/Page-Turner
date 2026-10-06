@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bylp2tvf6hcn4"]
+
+[ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="1_wm4b4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1_wm4b4")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(1547, 31)
+
+[node name="Label" type="Label" unique_id=918934751]
+offset_left = -464.0
+offset_top = 384.0
+offset_right = 1096.0
+offset_bottom = 429.0
+text = "Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor Floor "
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1340507248]
+position = Vector2(464, -384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=534627558]
+position = Vector2(301, 406.5)
+shape = SubResource("RectangleShape2D_g4v7s")

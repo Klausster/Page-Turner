@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dvk34gm7c0var"]
+
+[ext_resource type="Script" uid="uid://s4lrdyjkxa7" path="res://win_screen.gd" id="1_erk2x"]
+[ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_2l6cc"]
+
+[node name="Win-Screen" type="Control" unique_id=12706042]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_erk2x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1616664383]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 643.0
+color = Color(0.32325763, 0.7147084, 0.16729715, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1897020076]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 131.0
+offset_right = 826.0
+offset_bottom = 189.0
+theme_override_fonts/font = ExtResource("2_2l6cc")
+theme_override_font_sizes/font_size = 52
+text = "YOU WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RetryButton" type="Button" parent="." unique_id=1397558031]
+layout_mode = 0
+offset_left = 469.0
+offset_top = 365.0
+offset_right = 657.0
+offset_bottom = 501.0
+theme_override_fonts/font = ExtResource("2_2l6cc")
+theme_override_font_sizes/font_size = 32
+text = "RETRY"
