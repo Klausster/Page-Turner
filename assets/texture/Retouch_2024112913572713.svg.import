@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3au48fhvif34"
-path="res://.godot/imported/Retouch_2024112913572713.webp-4cd0afddf66f759bf520de8917acd30d.ctex"
+uid="uid://cbuwdllfrb18n"
+path="res://.godot/imported/Retouch_2024112913572713.svg-76f9f393d1159369162d08d30f2c6372.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Retouch_2024112913572713.webp"
-dest_files=["res://.godot/imported/Retouch_2024112913572713.webp-4cd0afddf66f759bf520de8917acd30d.ctex"]
+source_file="res://assets/texture/Retouch_2024112913572713.svg"
+dest_files=["res://.godot/imported/Retouch_2024112913572713.svg-76f9f393d1159369162d08d30f2c6372.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

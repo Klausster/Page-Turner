@@ -1,15 +1,9 @@
 [gd_scene format=3 uid="uid://03mrfph6brvy"]
 
-[ext_resource type="Script" uid="uid://cxp80f72854a7" path="res://character_body_2d.gd" id="1_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_h2yge"]
-[ext_resource type="AudioStream" uid="uid://cykssew7ld6jm" path="res://assets/sounds/Jump.mp3" id="3_h2yge"]
-[ext_resource type="Texture2D" uid="uid://cbuwdllfrb18n" path="res://Retouch_2024112913572713.svg" id="4_lquwl"]
-[ext_resource type="AudioStream" uid="uid://c80jcjngceu2b" path="res://assets/sounds/Song 1.mp3" id="5_5vw27"]
-[ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="5_7mycd"]
-[ext_resource type="Texture2D" uid="uid://eb2r158wd2wo" path="res://assets/texture/flag-svgrepo-com.svg" id="7_272bh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(126, 122)
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://scenes/player.tscn" id="1_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://cbuwdllfrb18n" path="res://assets/texture/Retouch_2024112913572713.svg" id="2_tefeu"]
+[ext_resource type="AudioStream" uid="uid://c80jcjngceu2b" path="res://assets/sounds/Song 1.mp3" id="4_tipki"]
+[ext_resource type="Texture2D" uid="uid://eb2r158wd2wo" path="res://assets/texture/flag-svgrepo-com.svg" id="5_85g3d"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
@@ -22,6 +16,17 @@ size = Vector2(0.99324965, 0.992)
 radius = 0.031999946
 height = 0.085999966
 
+[sub_resource type="GDScript" id="GDScript_jyhfs"]
+script/source = "
+extends Area2D
+
+func _ready() -> void:
+		pass
+	
+func _on_body_entered(body: Node2D) -> void:
+	get_tree().quit()
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
 size = Vector2(0.05300006, 0.07475014)
 
@@ -30,24 +35,8 @@ size = Vector2(46.5, 207)
 
 [node name="main" type="Node2D" unique_id=300319353]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1669281225]
-position = Vector2(-2, 4)
-script = ExtResource("1_0xm2m")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=310896879]
-position = Vector2(542, 271)
-texture = ExtResource("2_h2yge")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1792890541]
-position = Vector2(542, 273)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CharacterBody2D" unique_id=668314473]
-position = Vector2(535, 281)
-stream = ExtResource("3_h2yge")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=839650644]
-position = Vector2(547, 281)
+[node name="PLAYER" parent="." unique_id=1868615559 instance=ExtResource("1_tbgi4")]
+position = Vector2(562, 322)
 
 [node name="LevelNode" type="Node2D" parent="." unique_id=1464257449]
 position = Vector2(576, 938)
@@ -97,28 +86,28 @@ shape = SubResource("CapsuleShape2D_g4v7s")
 [node name="Sprite2D" type="Sprite2D" parent="Spike/StaticBody2D" unique_id=695918449]
 position = Vector2(1.01, -0.56850004)
 scale = Vector2(0.00015966808, 7.128902e-05)
-texture = ExtResource("4_lquwl")
+texture = ExtResource("2_tefeu")
 
 [node name="Area2D" type="Area2D" parent="Spike/StaticBody2D" unique_id=2036271629]
 position = Vector2(5.9604645e-08, 0)
-script = ExtResource("5_7mycd")
+script = SubResource("GDScript_jyhfs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike/StaticBody2D/Area2D" unique_id=2143321253]
 position = Vector2(1.0115, -0.55799997)
 shape = SubResource("RectangleShape2D_57qmd")
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=960336326]
-stream = ExtResource("5_5vw27")
+stream = ExtResource("4_tipki")
 autoplay = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=322325551]
 position = Vector2(2157, 287)
-script = ExtResource("5_7mycd")
+script = SubResource("GDScript_jyhfs")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=666688583]
 position = Vector2(-4.2499027, 0.7500076)
 scale = Vector2(0.058125243, 0.256875)
-texture = ExtResource("7_272bh")
+texture = ExtResource("5_85g3d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=79393525]
 position = Vector2(-5, 0)
