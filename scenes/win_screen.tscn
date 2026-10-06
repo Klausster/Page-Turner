@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvk34gm7c0var"]
 
-[ext_resource type="Script" uid="uid://s4lrdyjkxa7" path="res://win_screen.gd" id="1_erk2x"]
+[ext_resource type="Script" uid="uid://s4lrdyjkxa7" path="res://Extra Scenes/win_screen.gd" id="1_erk2x"]
 [ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_2l6cc"]
 
 [node name="Win-Screen" type="Control" unique_id=12706042]
