@@ -39,19 +39,12 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(1547, 31)
 
-[sub_resource type="Curve" id="Curve_d0u6y"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
-point_count = 1
-
-[sub_resource type="CurveTexture" id="CurveTexture_57qmd"]
-curve = SubResource("Curve_d0u6y")
-
 [node name="main" type="Node2D" unique_id=300319353]
 
 [node name="PLAYER" parent="." unique_id=1868615559 instance=ExtResource("1_tbgi4")]
 position = Vector2(562, 322)
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=960336326]
+[node name="bg_music" type="AudioStreamPlayer" parent="." unique_id=960336326]
 stream = ExtResource("4_tipki")
 autoplay = true
 
@@ -82,13 +75,6 @@ position = Vector2(464, -384)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Label/StaticBody2D" unique_id=191606068]
 position = Vector2(301, 406.5)
 shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2133681119]
-z_index = -5
-position = Vector2(1382, 124.000015)
-scale = Vector2(15.0859375, 2096.75)
-texture = SubResource("CurveTexture_57qmd")
-metadata/_edit_lock_ = true
 
 [node name="Label2" parent="." unique_id=918934751 instance=ExtResource("6_tefeu")]
 offset_left = 1192.0

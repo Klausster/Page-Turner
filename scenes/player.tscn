@@ -10,6 +10,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(12, 12)
 
+[sub_resource type="Curve" id="Curve_d0u6y"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_tuyoq"]
+curve = SubResource("Curve_d0u6y")
+
 [node name="PLAYER" type="Node2D" unique_id=1868615559]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1645934114]
@@ -36,3 +43,9 @@ stream = ExtResource("5_fjrip")
 
 [node name="Jump" type="AudioStreamPlayer" parent="CharacterBody2D" unique_id=401884672]
 stream = ExtResource("3_i3pqv")
+
+[node name="background" type="Sprite2D" parent="CharacterBody2D" unique_id=1674397092]
+z_index = -5
+position = Vector2(-2, 2.0000305)
+scale = Vector2(9.9765625, 1647.9999)
+texture = SubResource("CurveTexture_tuyoq")
