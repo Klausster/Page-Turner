@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://eb2r158wd2wo" path="res://assets/texture/flag-svgrepo-com.svg" id="5_85g3d"]
 [ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://bylp2tvf6hcn4" path="res://scenes/Floor.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://c5gmk83nshabn" path="res://scenes/death_box.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://de6kbsug6wckw" path="res://scenes/ice.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://c201kqm66rjry" path="res://scenes/pause_menu.tscn" id="9_85g3d"]
 
 [sub_resource type="GDScript" id="GDScript_jyhfs"]
 script/source = "# finish.gd
@@ -47,6 +50,7 @@ position = Vector2(562, 322)
 [node name="bg_music" type="AudioStreamPlayer" parent="." unique_id=960336326]
 stream = ExtResource("4_tipki")
 autoplay = true
+bus = &"Music"
 
 [node name="Finish" type="Area2D" parent="." unique_id=322325551]
 position = Vector2(2157, 287)
@@ -84,3 +88,13 @@ offset_bottom = 430.0
 
 [node name="SPIKE" parent="." unique_id=1949793350 instance=ExtResource("4_jyhfs")]
 position = Vector2(1566, 373.00003)
+
+[node name="DeathBox" parent="." unique_id=1765276151 instance=ExtResource("7_o6xl0")]
+position = Vector2(238, 1078)
+
+[node name="Ice" parent="." unique_id=465526863 groups=["ice"] instance=ExtResource("8_tipki")]
+position = Vector2(-139, 282)
+scale = Vector2(5, 1)
+
+[node name="PauseMenu" parent="." unique_id=245255720 instance=ExtResource("9_85g3d")]
+visible = false

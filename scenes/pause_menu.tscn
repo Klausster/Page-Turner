@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c201kqm66rjry"]
+
+[ext_resource type="Script" uid="uid://6ttg2sy02n1s" path="res://scripts/pause_menu.gd" id="1_kukqi"]
+[ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_5d2l8"]
+[ext_resource type="PackedScene" uid="uid://bvyujljyfjq5h" path="res://scenes/Settings.tscn" id="3_7l7mv"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=245255720]
+script = ExtResource("1_kukqi")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=120907424]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49411765)
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=1427588278]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -79.0
+offset_right = 48.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Buttons" unique_id=379788657]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5d2l8")
+theme_override_font_sizes/font_size = 93
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Buttons" unique_id=381873735]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5d2l8")
+text = "Resume"
+
+[node name="SettingsButton" type="Button" parent="Buttons" unique_id=363704492]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5d2l8")
+text = "Settings"
+
+[node name="MainMenuButton" type="Button" parent="Buttons" unique_id=752414591]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5d2l8")
+text = "Main Menu"
+
+[node name="QuitButton" type="Button" parent="Buttons" unique_id=532043842]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5d2l8")
+text = "Quit"
+
+[node name="SettingsMenu" parent="." unique_id=370088752 instance=ExtResource("3_7l7mv")]
+unique_name_in_owner = true
+visible = false
+offset_right = 210.0
+offset_bottom = 116.0

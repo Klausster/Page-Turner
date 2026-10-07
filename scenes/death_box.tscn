@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c5gmk83nshabn"]
+
+[ext_resource type="Script" uid="uid://cji6d6tpxiouk" path="res://scenes/deathbox.gd" id="1_1372o"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tipki"]
+
+[node name="DeathBox" type="Node2D" unique_id=1765276151]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1930442982]
+position = Vector2(59, 63)
+script = ExtResource("1_1372o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1156474495]
+position = Vector2(841, -1)
+scale = Vector2(5, 5)
+shape = SubResource("WorldBoundaryShape2D_tipki")

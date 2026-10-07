@@ -35,14 +35,19 @@ process_callback = 0
 position_smoothing_enabled = true
 script = ExtResource("3_dqkch")
 
-[node name="ZoomInSound" type="AudioStreamPlayer" parent="CharacterBody2D/player_camera" unique_id=1115822636]
+[node name="ZoomIn" type="AudioStreamPlayer" parent="CharacterBody2D/player_camera" unique_id=1115822636]
+unique_name_in_owner = true
 stream = ExtResource("4_tuyoq")
+bus = &"SFX"
 
-[node name="ZoomOutSound" type="AudioStreamPlayer" parent="CharacterBody2D/player_camera" unique_id=2134722203]
+[node name="ZoomOut" type="AudioStreamPlayer" parent="CharacterBody2D/player_camera" unique_id=2134722203]
+unique_name_in_owner = true
 stream = ExtResource("5_fjrip")
+bus = &"SFX"
 
 [node name="Jump" type="AudioStreamPlayer" parent="CharacterBody2D" unique_id=401884672]
 stream = ExtResource("3_i3pqv")
+bus = &"SFX"
 
 [node name="background" type="Sprite2D" parent="CharacterBody2D" unique_id=1674397092]
 z_index = -5
