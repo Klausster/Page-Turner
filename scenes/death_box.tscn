@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5gmk83nshabn"]
 
-[ext_resource type="Script" uid="uid://cji6d6tpxiouk" path="res://scenes/deathbox.gd" id="1_1372o"]
+[ext_resource type="Script" uid="uid://cji6d6tpxiouk" path="res://scripts/deathbox.gd" id="1_1372o"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tipki"]
 

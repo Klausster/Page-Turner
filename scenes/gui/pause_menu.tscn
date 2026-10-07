@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6ttg2sy02n1s" path="res://scripts/pause_menu.gd" id="1_kukqi"]
 [ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_5d2l8"]
-[ext_resource type="PackedScene" uid="uid://bvyujljyfjq5h" path="res://scenes/Settings.tscn" id="3_7l7mv"]
+[ext_resource type="PackedScene" uid="uid://bvyujljyfjq5h" path="res://scenes/gui/settings.tscn" id="3_7l7mv"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=245255720]
 script = ExtResource("1_kukqi")

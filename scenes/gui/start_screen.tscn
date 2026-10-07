@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://dbj0tshf0gepe" path="res://scripts/gui/start_screen.gd" id="1_o7i0r"]
 [ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_he1sj"]
 [ext_resource type="AudioStream" uid="uid://bovnao73wxws0" path="res://assets/sounds/TitleMusic.mp3" id="3_he1sj"]
-[ext_resource type="PackedScene" uid="uid://bvyujljyfjq5h" path="res://scenes/Settings.tscn" id="4_r2jwc"]
+[ext_resource type="Theme" uid="uid://cwsm2laq55gbm" path="res://settings/theme_ui.tres" id="3_juenr"]
+[ext_resource type="PackedScene" uid="uid://bvyujljyfjq5h" path="res://scenes/gui/settings.tscn" id="4_r2jwc"]
 
 [node name="StartScreen" type="Control" unique_id=1648653894]
 layout_mode = 3
@@ -47,18 +48,19 @@ grow_vertical = 2
 [node name="Start" type="Button" parent="VBoxContainer" unique_id=1744777148]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_he1sj")
+theme = ExtResource("3_juenr")
 text = "Play"
 
 [node name="Settings" type="Button" parent="VBoxContainer" unique_id=454482865]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("3_juenr")
 text = "Settings"
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=1613426425]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_he1sj")
+theme = ExtResource("3_juenr")
 text = "Quit"
 
 [node name="TitleMusic" type="AudioStreamPlayer" parent="." unique_id=1113667277]
@@ -70,7 +72,7 @@ bus = &"Music"
 [node name="SettingsMenu" parent="." unique_id=370088752 instance=ExtResource("4_r2jwc")]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 0.0
-offset_top = 0.0
+offset_left = 3.0
+offset_top = -4.0
 offset_right = 229.0
 offset_bottom = 173.0

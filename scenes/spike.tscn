@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvvo15hds6a7e"]
 
-[ext_resource type="Texture2D" uid="uid://cvuy1l7ogby6j" path="res://assets/texture/spike.png" id="1_7a7y0"]
+[ext_resource type="Texture2D" uid="uid://blmprej3wnaq8" path="res://assets/texture/spike.png" id="1_7a7y0"]
 [ext_resource type="Script" uid="uid://ci7gpp0dtp46g" path="res://scripts/death_contact.gd" id="2_7a7y0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]

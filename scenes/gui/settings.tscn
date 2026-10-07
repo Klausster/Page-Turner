@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bvyujljyfjq5h"]
 
-[ext_resource type="Script" uid="uid://c5ra0r64jptjl" path="res://scenes/settings.gd" id="1_i47rn"]
-[ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_46duy"]
+[ext_resource type="Script" uid="uid://c5ra0r64jptjl" path="res://scripts/settings.gd" id="1_l3f6e"]
+[ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="2_0qlm1"]
+[ext_resource type="Theme" uid="uid://cwsm2laq55gbm" path="res://settings/theme_ui.tres" id="3_x0fyi"]
 
 [node name="Settings" type="Control" unique_id=370088752]
 layout_mode = 3
@@ -10,7 +11,7 @@ offset_left = 290.0
 offset_top = 45.0
 offset_right = 519.0
 offset_bottom = 218.0
-script = ExtResource("1_i47rn")
+script = ExtResource("1_l3f6e")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1498186069]
 layout_mode = 1
@@ -35,7 +36,7 @@ layout_mode = 2
 
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=834330544]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_46duy")
+theme_override_fonts/font = ExtResource("2_0qlm1")
 theme_override_font_sizes/font_size = 75
 text = "Settings"
 
@@ -44,7 +45,7 @@ layout_mode = 2
 
 [node name="MasterLabel" type="Label" parent="CenterContainer/VBoxContainer/MasterBox" unique_id=100647866]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_46duy")
+theme = ExtResource("3_x0fyi")
 text = "Master Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -54,6 +55,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_x0fyi")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -64,13 +66,14 @@ layout_mode = 2
 
 [node name="MusicLabel" type="Label" parent="CenterContainer/VBoxContainer/MusicBox" unique_id=132440872]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_46duy")
+theme = ExtResource("3_x0fyi")
 text = "Music Volume"
 
 [node name="MusicSlider" type="HSlider" parent="CenterContainer/VBoxContainer/MusicBox" unique_id=2140522881]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_x0fyi")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -80,13 +83,14 @@ layout_mode = 2
 
 [node name="SFXLabel" type="Label" parent="CenterContainer/VBoxContainer/SFXBox" unique_id=1927139254]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_46duy")
+theme = ExtResource("3_x0fyi")
 text = "SFX Volume"
 
 [node name="SFXSlider" type="HSlider" parent="CenterContainer/VBoxContainer/SFXBox" unique_id=759184222]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_x0fyi")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -94,5 +98,6 @@ value = 1.0
 [node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1617017050]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_46duy")
+theme = ExtResource("3_x0fyi")
+theme_override_fonts/font = ExtResource("2_0qlm1")
 text = "Back"

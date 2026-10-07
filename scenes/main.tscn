@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bylp2tvf6hcn4" path="res://scenes/Floor.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://c5gmk83nshabn" path="res://scenes/death_box.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://de6kbsug6wckw" path="res://scenes/ice.tscn" id="8_tipki"]
-[ext_resource type="PackedScene" uid="uid://c201kqm66rjry" path="res://scenes/pause_menu.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://c201kqm66rjry" path="res://scenes/gui/pause_menu.tscn" id="9_85g3d"]
 
 [sub_resource type="GDScript" id="GDScript_jyhfs"]
 script/source = "# finish.gd

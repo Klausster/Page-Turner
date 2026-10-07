@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://cwsm2laq55gbm"]
+
+[ext_resource type="Texture2D" uid="uid://bo1vowyirt1hj" path="res://assets/grabber.png" id="1_hy85s"]
+[ext_resource type="FontFile" uid="uid://cpsk41ma2srno" path="res://assets/fonts/Nosutaru-dotMPlusH-10-Regular.ttf" id="1_t5dwp"]
+[ext_resource type="Texture2D" uid="uid://u2g71bako25h" path="res://assets/grabber_disabled.png" id="2_34cf0"]
+[ext_resource type="Texture2D" uid="uid://sfrt4gkhao0s" path="res://assets/grabber_higlight.png" id="3_k24sj"]
+[ext_resource type="Texture2D" uid="uid://dvxcgo41486fh" path="res://assets/tick.png" id="4_34cf0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3f6e"]
+bg_color = Color(1, 1, 1, 1)
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 1.0
+expand_margin_bottom = 3.0
+
+[resource]
+default_font = ExtResource("1_t5dwp")
+HSlider/icons/grabber = ExtResource("1_hy85s")
+HSlider/icons/grabber_disabled = ExtResource("2_34cf0")
+HSlider/icons/grabber_highlight = ExtResource("3_k24sj")
+HSlider/icons/tick = ExtResource("4_34cf0")
+HSlider/styles/slider = SubResource("StyleBoxFlat_l3f6e")
+Label/fonts/font = ExtResource("1_t5dwp")
