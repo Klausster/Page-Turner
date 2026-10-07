@@ -83,4 +83,4 @@ offset_right = 2752.0
 offset_bottom = 430.0
 
 [node name="SPIKE" parent="." unique_id=1949793350 instance=ExtResource("4_jyhfs")]
-position = Vector2(1566, 383)
+position = Vector2(1566, 373.00003)

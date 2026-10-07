@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbuwdllfrb18n"
-path="res://.godot/imported/Retouch_2024112913572713.svg-76f9f393d1159369162d08d30f2c6372.ctex"
+uid="uid://cvuy1l7ogby6j"
+path="res://.godot/imported/spike.png-574ee34b1cd4993935e607af48e8dc6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/texture/Retouch_2024112913572713.svg"
-dest_files=["res://.godot/imported/Retouch_2024112913572713.svg-76f9f393d1159369162d08d30f2c6372.ctex"]
+source_file="res://assets/texture/spike.png"
+dest_files=["res://.godot/imported/spike.png-574ee34b1cd4993935e607af48e8dc6d.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

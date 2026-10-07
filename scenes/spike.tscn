@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvvo15hds6a7e"]
 
-[ext_resource type="Texture2D" uid="uid://cbuwdllfrb18n" path="res://assets/texture/Retouch_2024112913572713.svg" id="1_ljd5v"]
-[ext_resource type="Script" uid="uid://ci7gpp0dtp46g" path="res://Extra Scenes/area_2d.gdkill_zone.gd" id="2_7a7y0"]
+[ext_resource type="Texture2D" uid="uid://cvuy1l7ogby6j" path="res://assets/texture/spike.png" id="1_7a7y0"]
+[ext_resource type="Script" uid="uid://ci7gpp0dtp46g" path="res://scripts/death_contact.gd" id="2_7a7y0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
@@ -24,9 +24,8 @@ position = Vector2(-0.0012498989, -8.568168e-08)
 shape = SubResource("CapsuleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=523685706]
-position = Vector2(-0.0022499457, -0.011500029)
-scale = Vector2(0.00015966808, 7.128902e-05)
-texture = ExtResource("1_ljd5v")
+scale = Vector2(0.005, 0.005)
+texture = ExtResource("1_7a7y0")
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=172457526]
 position = Vector2(5.9604645e-08, 0)
