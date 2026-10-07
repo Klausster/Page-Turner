@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvxcgo41486fh"
-path="res://.godot/imported/tick.png-ee5bcc551a15929405acbb776e04ee53.ctex"
+uid="uid://sfrt4gkhao0s"
+path="res://.godot/imported/grabber_higlight.png-47922128aa22dc60882ed7ea9b15619f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tick.png"
-dest_files=["res://.godot/imported/tick.png-ee5bcc551a15929405acbb776e04ee53.ctex"]
+source_file="res://assets/texture/ui/slider/grabber_higlight.png"
+dest_files=["res://.godot/imported/grabber_higlight.png-47922128aa22dc60882ed7ea9b15619f.ctex"]
 
 [params]
 

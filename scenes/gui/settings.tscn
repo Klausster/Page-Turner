@@ -9,8 +9,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_left = 290.0
 offset_top = 45.0
-offset_right = 519.0
-offset_bottom = 218.0
+offset_right = 562.0
+offset_bottom = 246.0
 script = ExtResource("1_l3f6e")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1498186069]
@@ -24,6 +24,7 @@ offset_right = 1399.0
 offset_bottom = 747.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.0015631, 1.0067858)
 color = Color(0.24115604, 0.24115604, 0.24115604, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1424400286]
@@ -46,6 +47,7 @@ layout_mode = 2
 [node name="MasterLabel" type="Label" parent="CenterContainer/VBoxContainer/MasterBox" unique_id=100647866]
 layout_mode = 2
 theme = ExtResource("3_x0fyi")
+theme_override_font_sizes/font_size = 16
 text = "Master Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -101,3 +103,10 @@ layout_mode = 2
 theme = ExtResource("3_x0fyi")
 theme_override_fonts/font = ExtResource("2_0qlm1")
 text = "Back"
+
+[node name="fullscreenCheckbox" type="CheckBox" parent="CenterContainer/VBoxContainer" unique_id=1716145782]
+layout_mode = 2
+theme = ExtResource("3_x0fyi")
+text = "Fullscreen"
+
+[connection signal="toggled" from="CenterContainer/VBoxContainer/fullscreenCheckbox" to="." method="_on_fullscreen_checkbox_toggled"]

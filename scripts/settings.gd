@@ -28,6 +28,8 @@ func _ready() -> void:
 func open() -> void:
 	for bus in sliders:
 		sliders[bus].set_value_no_signal(GameSettings.get_volume(bus))
+	#Displays proper checked value for fullscreen checkbox referencing the settings
+	$CenterContainer/VBoxContainer/fullscreenCheckbox.set_pressed_no_signal(GameSettings.get_fullscreen())
 	show()
 	# Focus the first slider so a controller can use the menu right away.
 	%MasterSlider.grab_focus()
@@ -49,3 +51,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if visible and event.is_action_pressed("ui_cancel"):
 		close()
 		get_viewport().set_input_as_handled()
+
+
+
+func _on_fullscreen_checkbox_toggled(toggled_on: bool) -> void:
+	GameSettings.set_fullscreen(toggled_on)

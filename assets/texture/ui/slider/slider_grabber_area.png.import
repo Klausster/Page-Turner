@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sfrt4gkhao0s"
-path="res://.godot/imported/grabber_higlight.png-b57fb27285fcccda7d76ea976535e276.ctex"
+uid="uid://jq050b2bhf13"
+path="res://.godot/imported/slider_grabber_area.png-3ccc081afc08c6b118e3fea55a1641ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/grabber_higlight.png"
-dest_files=["res://.godot/imported/grabber_higlight.png-b57fb27285fcccda7d76ea976535e276.ctex"]
+source_file="res://assets/texture/ui/slider/slider_grabber_area.png"
+dest_files=["res://.godot/imported/slider_grabber_area.png-3ccc081afc08c6b118e3fea55a1641ea.ctex"]
 
 [params]
 

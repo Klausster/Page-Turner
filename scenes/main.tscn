@@ -25,8 +25,8 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	print(\"FINISH touched\")
 	if body.has_method(\"die\"):
-		if next_level != \"res://scenes/win_screen.tscn\":
-			get_tree().change_scene_to_file.call_deferred(\"res://scenes/win_screen.tscn\")
+		if next_level != \"res://scenes/gui/win_screen.tscn\":
+			get_tree().change_scene_to_file.call_deferred(\"res://scenes/gui/win_screen.tscn\")
 		else:
 			print(\"You win!\")
 "

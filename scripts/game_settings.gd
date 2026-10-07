@@ -6,6 +6,8 @@ const BUS_NAMES = ["Master", "Music", "SFX"]       # Must match your bus names e
 
 # Volume per bus as a 0.0 to 1.0 slider value.
 var volumes := {"Master": 1.0, "Music": 1.0, "SFX": 1.0}
+# Fullscreen toggle variable
+var fullscreen := false
 
 
 func _ready() -> void:
@@ -13,7 +15,7 @@ func _ready() -> void:
 	load_settings()
 	for bus in BUS_NAMES:
 		_apply(bus)
-
+	_apply_fullscreen()
 
 # Called by the sliders whenever a value changes.
 func set_volume(bus_name: String, value: float) -> void:
@@ -35,11 +37,28 @@ func _apply(bus_name: String) -> void:
 	# Fully mute at the bottom of the slider (linear_to_db(0) is -infinity).
 	AudioServer.set_bus_mute(index, volumes[bus_name] <= 0.001)
 
+func set_fullscreen(value: bool) -> void:
+	fullscreen = value
+	_apply_fullscreen()
+
+func get_fullscreen() -> bool:
+	return fullscreen
+
+func _apply_fullscreen() -> void:
+	if fullscreen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+
+
+
 
 func save_settings() -> void:
 	var config := ConfigFile.new()
 	for bus in BUS_NAMES:
 		config.set_value("audio", bus, volumes[bus])
+	config.set_value("display", "fullscreen", fullscreen)
 	config.save(SAVE_PATH)
 
 
@@ -49,3 +68,4 @@ func load_settings() -> void:
 		return # No save file yet, so keep the defaults.
 	for bus in BUS_NAMES:
 		volumes[bus] = config.get_value("audio", bus, 1.0)
+	fullscreen = config.get_value("display", "fullscreen", false)

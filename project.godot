@@ -32,6 +32,10 @@ window/stretch/aspect="expand"
 
 ice=""
 
+[gui]
+
+theme/custom="uid://cwsm2laq55gbm"
+
 [input]
 
 move_left={
